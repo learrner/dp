@@ -1,0 +1,23 @@
+<div class="search-hero">
+    <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="  Start searching name">
+  </div>
+
+<table class="table" *ngIf="userList">
+    <!-- {{userList | json}} -->
+    <tr>
+        <th>
+            User ID
+        </th>
+        <th>
+            Name
+        </th>
+    </tr>
+    <tr *ngFor="let user of userList | listFilter: searchText" (click)="openUserComment(user.id)">
+        <td>
+            {{user.id}}
+        </td>
+        <td>
+            {{user.name}}
+        </td>
+    </tr>
+</table>
