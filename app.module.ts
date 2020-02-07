@@ -9,6 +9,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserPostComponent } from './components/user-post/user-post.component';
 import { ListFilterPipe } from './list-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { BarGraphComponent } from './components/bar-graph/bar-graph.component';
 // import { HttpServicesService } from './services/http-services.service';
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     UserListComponent,
     UserPostComponent,
-    ListFilterPipe
+    ListFilterPipe,
+    BarGraphComponent
   ],
   imports: [
     BrowserModule,
