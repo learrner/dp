@@ -1,0 +1,29 @@
+.bar {
+    /* fill: steelblue; */
+    opacity: 0.5;
+
+}
+
+.bar:hover {
+    fill: brown;
+}
+
+.axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+.x_axis path {
+    display: none;
+  }
+
+  .bar {
+    /* fill: steelblue !important; */
+    opacity: 0.5 !important;
+  }
+  
+  .bar2 {
+    fill: gray !important;
+    opacity: 0.5 !important;
+  }
