@@ -2,6 +2,10 @@
     <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="  Start searching name">
   </div>
 
+  <div *ngIf="errorMessage" class="alert alert-warning">
+    <strong>Warning!</strong> {{errorMessage}}
+ </div>
+
 <table class="table" *ngIf="userList">
     <!-- {{userList | json}} -->
     <tr>

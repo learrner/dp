@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { ApiConstant } from "../constants/url-contants";
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpServicesService {
+
+  testError = new Observable() ;
+  
 
   constructor( private httpClient: HttpClient) { }
 

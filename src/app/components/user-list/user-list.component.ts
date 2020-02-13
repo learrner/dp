@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpServicesService } from 'src/app/services/http-services.service';
 import { BeanData } from '../bean/static-data';
 import { Router } from "@angular/router";
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-user-list',
@@ -11,6 +12,7 @@ import { Router } from "@angular/router";
 export class UserListComponent implements OnInit {
   public userList: [];
   searchText;
+  errorMessage = '';
 
   constructor( private http: HttpServicesService, private bean: BeanData, private router: Router) { }
 
@@ -23,11 +25,15 @@ export class UserListComponent implements OnInit {
 
 
   openUserComment(i) {
-    this.http.getUserPostById(i).subscribe(res => {
+    this.http.getUserPostById(322333).subscribe((res) => {
       console.log(res)
       this.bean.postData = res;
       this.router.navigateByUrl("user-post")
-    })
+    },
+    (error) => {
+      this.errorMessage = error.message; 
+    }
+    )
   }
 
 }

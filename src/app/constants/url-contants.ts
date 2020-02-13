@@ -1,5 +1,5 @@
 export const ApiConstant = {
     BASE_URL: 'https://jsonplaceholder.typicode.com/',
-    USER: 'users',
+    USER: 'user',
     POST: 'posts'
 }
