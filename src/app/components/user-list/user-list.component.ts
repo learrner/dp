@@ -25,7 +25,7 @@ export class UserListComponent implements OnInit {
 
 
   openUserComment(i) {
-    this.http.getUserPostById(322333).subscribe((res) => {
+    this.http.getUserPostById(i).subscribe((res) => {
       console.log(res)
       this.bean.postData = res;
       this.router.navigateByUrl("user-post")

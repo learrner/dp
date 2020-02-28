@@ -18,6 +18,6 @@ export class HttpServicesService {
   }
 
   getUserPostById(i: number):Observable<any> {
-    return this.httpClient.get(ApiConstant.BASE_URL + ApiConstant.POST + "?"+i)
+    return this.httpClient.get(ApiConstant.BASE_URL + ApiConstant.POST + "?userId="+i)
   }
 }
